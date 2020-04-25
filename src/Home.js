@@ -16,12 +16,9 @@ const Wrapper = styled.div`
   min-height: calc(120vh);
   background-color: #333;
   color: #fff;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   text-align: center;
   padding-top: 200px;
+
 
   div.title {
     font-size: 40px;

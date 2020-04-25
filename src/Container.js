@@ -38,45 +38,34 @@ const Container = ({location}) => {
 // When enter is done, the enter-done class stays applied
 const Wrapper = styled.div`
     .fade-enter div {
-      transform: translate(-100%, 100%);
-      border-radius: 100%;
-      z-index: 1;
-      position: absolute;
-      width: 100%;
-      top: 0;
-      left: 0;
+      transform: translateX(-100%);
+      z-index: 0;
     }
 
     .fade-enter.fade-enter-active div {
-        transform: translate(0) scale(2);
-        transition: all 1000ms ease-in;
-        border-radius: 100%;
-        z-index: 1;
+        transform: translateX(0);
+        padding-top: 200px;
+        transition: all 1000ms linear;
     }
     
     .fade-enter-done div {
-      transform: translate(0) scale(1);
-      border-radius: 0;
-    }
-
-    .fade-enter div span,
-    .fade-enter div p {
-      opacity: 0; 
-    }
-
-    .fade-enter-done div span,
-    .fade-enter-done div p {
-      transition: opacity 300ms linear;
-      opacity: 1;
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+      // padding-top: 20px;
     }
 
     .fade-exit div {
+        // // transform: translateX(0);
+        // opacity: 0;
     }
       
     .fade-exit.fade-exit-active {
-
+      transform: translateX(100%);
       transition: all 1000ms linear;
-
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
     }
     
     div.transition-group {
@@ -88,7 +77,7 @@ const Wrapper = styled.div`
       width: 100%;
       top: 0;
       left: 0;
-
+      z-index: -1;
     }
 `;
 
