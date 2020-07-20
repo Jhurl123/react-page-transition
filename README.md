@@ -1,4 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple application to use as a playground for react page transitions using React Router to give the appearance of a true single page application. Pages fade into one another leaving both pages in view for a moment as if the user isn't switching pages at all, but just transitioning to a new section.
 
 ## Available Scripts
 
